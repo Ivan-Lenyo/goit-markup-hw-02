@@ -1,12 +1,3 @@
-/* колір основного тексту #757575 */
-/* другорядний колір тексту #212121 */
-/* колір тексту логотипа #000000 */
-/* акцент #2196F3 */
-/* колір футера бекграунд #2F303A */
-/* білий колір #FFFFFF */
-/* колір тексту в футері rgba(255, 255, 255, 0.6); */
-/* колір бекграунду наша команда #F5F4FA */
-
 :root {
   --primary-text-color: #757575;
   --title-text-color: #212121;
@@ -15,6 +6,18 @@
   --bg-color: #f5f4fa;
   --bg-footer-color: #2f303a;
   --text-footer-color: rgba(255, 255, 255, 0.6);
+  --logo-black-color: #000000;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
 
 /* стили index.html */
@@ -22,20 +25,47 @@
 .page {
   background-color: var(--primary-white-color);
   color: var(--primary-text-color);
+
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
 }
 
 .list {
   list-style: none;
 }
 
+/* logo */
+
 .logo {
-  color: #000000;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.logo-web {
+  color: var(--accent-color);
+}
+
+.logo .logo-header {
+  color: var(--logo-black-color);
+}
+
+.footer .logo-footer {
+  color: var(--primary-white-color);
 }
 
 /* site-nav */
 
 .site-nav .link {
   color: var(--title-text-color);
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
 }
 
 .site-nav .link:hover,
@@ -51,6 +81,12 @@
 
 .contacts .link {
   color: var(--primary-text-color);
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
 }
 
 .contacts .link:hover,
@@ -66,24 +102,58 @@
 
 .hero-title {
   color: var(--primary-white-color);
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 /* section */
 
 .section-title {
   color: var(--title-text-color);
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
 }
 
 /* about us */
 
 .about-us-list .title {
   color: var(--title-text-color);
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.about-us-list .text {
+  font-size: 14px;
+  line-height: 1.71;
 }
 
 /* team */
 
 .team-list .title {
   color: var(--title-text-color);
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.team-list .text {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
 }
 
 .team {
@@ -95,6 +165,8 @@
 .button {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+  cursor: pointer;
+  font-family: inherit;
 }
 
 /* footer */
@@ -105,28 +177,61 @@
 
 .adress {
   color: var(--primary-white-color);
+
+  font-style: inherit;
+  font-size: 14px;
+  line-height: 1.71;
 }
 
 .contacts.link {
   color: var(--text-footer-color);
+
+  font-size: 14px;
+  line-height: 1.71;
 }
 
 /* стили portfolio.html */
 
 /* portfolio-nav */
 
-.portfolio-nav .portfolio-button {
+.portfolio-nav .button {
   color: var(--title-text-color);
+  background-color: var(--primary-white-color);
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
 }
 
-.portfolio-nav .portfolio-button:hover,
-.portfolio-nav .portfolio-button:focus {
+.portfolio-nav .button:hover,
+.portfolio-nav .button:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
 }
 
 /* portfolio-list */
 
-.portfolio-list .portfolio-title {
+.portfolio-list .title {
   color: var(--title-text-color);
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.portfolio-list .text {
+  color: var(--primary-text-color);
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+}
+
+a.works:active,
+a.works:hover,
+a.works {
+  text-decoration: none;
+  color: inherit;
 }
